@@ -11,6 +11,7 @@ import AboutSection from '@/components/AboutSection';
 import FinalCTASection from '@/components/FinalCTASection';
 import Footer from '@/components/Footer';
 import AnimatedSection from '@/components/AnimatedSection';
+import ShowcaseSection from '@/components/ShowcaseSection';
 import styles from './page.module.css';
 
 // --- KEY CHANGE IS HERE ---
@@ -65,6 +66,7 @@ export default function Home() {
       <AnimatedSection><ProblemSection /></AnimatedSection>
       <AnimatedSection><SolutionSection /></AnimatedSection>
       <AnimatedSection><HowItWorksSection /></AnimatedSection>
+      <AnimatedSection><ShowcaseSection /></AnimatedSection> 
       <AnimatedSection><ServicesSection /></AnimatedSection>
       <AnimatedSection><AboutSection /></AnimatedSection>
       <FinalCTASection />

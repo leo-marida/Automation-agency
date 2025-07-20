@@ -26,6 +26,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className={styles.navDesktop}>
           <a href="#services">Services</a>
+          <a href="#case-studies">Case Studies</a> 
           <a href="#how-it-works">How It Works</a>
           <a href="#about">About</a>
           <a href="#contact" className={styles.contactButton}>Contact</a>
@@ -44,6 +45,7 @@ const Header = () => {
             <FaTimes />
           </button>
           <a href="#services" onClick={toggleMenu}>Services</a>
+          <a href="#showcase" onClick={toggleMenu}>Case Studies</a>
           <a href="#how-it-works" onClick={toggleMenu}>How It Works</a>
           <a href="#about" onClick={toggleMenu}>About</a>
           <a href="#contact" onClick={toggleMenu}>Contact</a>
