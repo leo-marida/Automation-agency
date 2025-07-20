@@ -1,0 +1,31 @@
+/* src/components/FinalCTASection.module.css */
+.ctaSection {
+  background-image: linear-gradient(45deg, var(--slova-blue), var(--slova-blue-dark));
+  color: white;
+}
+.title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.text {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2.5rem auto;
+  opacity: 0.9;
+}
+.ctaButton {
+  background: white;
+  color: var(--slova-blue-dark);
+  font-weight: 700;
+}
+.ctaButton:hover {
+  background: var(--light-bg);
+  color: var(--slova-blue-dark);
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3) !important;
+}
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem; /* Reduce headline size */
+  }
+}

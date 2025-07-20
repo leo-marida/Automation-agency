@@ -1,0 +1,56 @@
+.solutionSection {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  text-align: left;
+}
+.textContainer {
+  flex: 1;
+}
+.title {
+  text-align: left;
+}
+.paragraph {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+.visualContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoSpinner {
+  animation: spin 20s linear infinite;
+}
+.logoImage {
+  transition: all 0.3s ease; /* Smooth transition if browser is resized */
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack vertically */
+    text-align: center;
+    gap: 2rem;
+  }
+  .title {
+    text-align: center;
+  }
+  .logoSpinner {
+    margin-top: 2rem;
+  }
+  .logoImage {
+    width: 350px; /* Smaller width on mobile */
+    height: 350px; /* Smaller height on mobile */
+  }
+}

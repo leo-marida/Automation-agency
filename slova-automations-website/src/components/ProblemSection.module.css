@@ -1,0 +1,49 @@
+/* src/components/ProblemSection.module.css */
+.problemSection {
+  background-color: var(--light-grey-bg);
+}
+.title {
+  color: var(--text-light);
+}
+.problemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.problemCard {
+  background-color: var(--dark-bg);
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  
+  /* --- ADD THESE PROPERTIES --- */
+  transition: all 0.3s ease;
+  transform-style: preserve-3d; /* For the 3D tilt effect */
+}
+
+/* --- NEW HOVER EFFECT --- */
+.problemCard:hover {
+  transform: perspective(1000px) rotateY(5deg) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-color: var(--slova-blue);
+}
+.iconWrapper {
+  font-size: 3rem;
+  color: var(--slova-blue);
+  margin-bottom: 1.5rem;
+}
+.problemCard p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+@media (max-width: 768px) {
+  .problemsGrid {
+    grid-template-columns: 1fr; /* Stack cards vertically */
+  }
+  .problemCard {
+    padding: 1.5rem;
+  }
+}

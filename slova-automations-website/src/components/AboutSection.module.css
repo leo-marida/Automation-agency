@@ -1,0 +1,43 @@
+/* src/components/AboutSection.module.css */
+.aboutSection {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+.imageContainer {
+  flex-shrink: 0;
+}
+.headshot {
+  border-radius: 50%;
+  border: 5px solid var(--slova-blue);
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+.textContainer {
+  text-align: left;
+}
+.title {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.textContainer p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .title {
+    text-align: center;
+  }
+  .headshot {
+    width: 200px;
+    height: 200px;
+  }
+}

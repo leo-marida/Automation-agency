@@ -1,0 +1,53 @@
+/* src/app/page.module.css (Final Fix) */
+
+.hero .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* This is the key for vertical centering */
+  align-items: center; /* This is the key for horizontal centering */
+  
+  /* --- ADD THIS TO FIX THE PADDING --- */
+  padding-top: 0;    /* Reset any top padding */
+  padding-bottom: 0; /* Reset any bottom padding */
+}
+
+/* We need to make the container inside the hero take up the remaining space */
+.hero .container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainHeadline {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
+  text-align: center;
+}
+
+.subHeadline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 700px;
+  margin: 0 auto 2.5rem auto;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .mainHeadline {
+    font-size: 2.5rem; /* Drastically reduce headline size */
+  }
+  .subHeadline {
+    font-size: 1.1rem;
+  }
+  .hero .container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

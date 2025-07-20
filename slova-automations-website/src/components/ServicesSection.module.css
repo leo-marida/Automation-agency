@@ -1,0 +1,61 @@
+/* src/components/ServicesSection.module.css */
+.servicesSection {
+  background-color: var(--dark-bg);
+}
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.serviceCard {
+  background-color: var(--light-grey-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  transform-style: preserve-3d;
+}
+.serviceCard:hover {
+  transform: perspective(1000px) rotateY(5deg) scale(1.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border-color: var(--slova-blue);
+}
+.iconWrapper {
+  font-size: 2.5rem;
+  color: var(--slova-blue);
+  margin-bottom: 1rem;
+}
+.serviceCard h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.serviceCard p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.subserviceList {
+  list-style-type: none;
+  text-align: left;
+  padding-left: 10px;
+}
+.subserviceList li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.subserviceList li::before {
+  content: '✓';
+  color: var(--slova-blue);
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .serviceCard:hover {
+    /* Disable hover effect on mobile for better usability */
+    transform: none;
+    box-shadow: none;
+  }
+}

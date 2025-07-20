@@ -1,0 +1,114 @@
+/* src/components/Header.module.css (Fully Responsive) */
+
+.header {
+  width: 100%;
+  height:100px;
+  background-color: white;
+  padding: 0.75rem 2rem; /* Adjusted padding for all screen sizes */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eeeeee;
+  position: relative; /* Needed for z-index context */
+  z-index: 1000;
+}
+
+/* --- DESKTOP NAVIGATION --- */
+.navDesktop a:not(.contactButton) {
+  color: var(--text-dark);
+  margin: 0 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  
+  /* The "invisible" border to prevent jumping on hover */
+  padding-bottom: 8px; 
+  border-bottom: 3px solid transparent; 
+  transition: all 0.3s ease;
+}
+
+/* --- KEY FIX: The hover effect is also isolated to non-contact-button links --- */
+.navDesktop a:not(.contactButton):hover {
+  color: var(--slova-blue);
+  border-bottom-color: var(--slova-blue);
+}
+
+
+/* --- Styles for the "Contact" button (now unaffected by the styles above) --- */
+.contactButton {
+  color: var(--slova-blue);
+  border: 2px solid var(--slova-blue);
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  /* Ensure it has no extra padding or bottom border */
+  padding-bottom: 0.5rem; 
+  border-bottom: 2px solid var(--slova-blue);
+}
+
+.contactButton:hover {
+  background-color: var(--slova-blue);
+  color: white !important;
+  transform: translateY(-2px); /* Adds a subtle "lift" effect */
+  box-shadow: 0 4px 15px rgba(0, 124, 240, 0.2);
+}
+
+/* --- MOBILE & HAMBURGER STYLES --- */
+.hamburger {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.navMobile {
+  display: none; /* Hidden on desktop */
+}
+.logoImage {
+  transition: all 0.3s ease; /* Smooth transition if browser is resized */
+}
+
+/* --- MEDIA QUERY FOR MOBILE SCREENS --- */
+@media (max-width: 768px) {
+  .navDesktop {
+    display: none; /* Hide desktop nav on mobile */
+  }
+  .hamburger {
+    display: block; /* Show hamburger on mobile */
+  }
+  .navMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--dark-bg);
+    z-index: 1001; /* Must be higher than the header's z-index */
+  }
+  .navMobile a {
+    color: var(--text-light);
+    font-size: 2rem;
+    margin: 1.5rem 0;
+  }
+  .closeButton {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .logoImage {
+    width: 150px; /* Smaller width on mobile */
+    height: 150px; /* Smaller height on mobile */
+  }
+}
