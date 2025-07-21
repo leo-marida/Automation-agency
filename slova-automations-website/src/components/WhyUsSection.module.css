@@ -1,0 +1,38 @@
+/* src/components/WhyUsSection.module.css */
+.whyUsSection {
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+.card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--slova-blue);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+.iconWrapper {
+  font-size: 2.5rem;
+  color: var(--slova-blue);
+  margin-bottom: 1.5rem;
+}
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+}

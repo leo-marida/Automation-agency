@@ -1,19 +1,23 @@
 // src/components/ProblemSection.js
-import { FaClock, FaShoppingCart, FaRegSmileBeam } from 'react-icons/fa';
+import { FaShoppingCart, FaHeadset, FaChartLine } from 'react-icons/fa'; // New, more specific icons
 import styles from './ProblemSection.module.css';
 
+// --- NEW, E-COMMERCE FOCUSED PROBLEMS ---
 const problems = [
   {
-    icon: <FaClock />,
-    text: "Countless hours lost to repetitive customer emails and manual data entry."
-  },
-  {
     icon: <FaShoppingCart />,
-    text: "Frustration from watching abandoned cart notifications pile up, knowing it's lost revenue."
+    title: "High Cart Abandonment",
+    text: "Watching potential sales vanish every day because generic follow-up emails aren't compelling enough to bring customers back."
   },
   {
-    icon: <FaRegSmileBeam />,
-    text: "The challenge of providing personalized support to every customer as your store grows."
+    icon: <FaHeadset />,
+    title: "Overwhelming Support Tickets",
+    text: "Your team is swamped answering the same 'Where is my order?' and 'What's your return policy?' questions over and over again."
+  },
+  {
+    icon: <FaChartLine />,
+    title: "Missed Growth Opportunities",
+    text: "Lacking the time and tools to offer personalized product recommendations or proactively manage inventory levels."
   }
 ];
 
@@ -21,11 +25,12 @@ const ProblemSection = () => {
   return (
     <section id="problem" className={styles.problemSection}>
       <div className="container">
-        <h2 className={`section-title ${styles.title}`}>Does This Sound Familiar?</h2>
+        <h2 className={`section-title ${styles.title}`}>The Silent Growth Killers of E-commerce</h2>
         <div className={styles.problemsGrid}>
           {problems.map((problem, index) => (
             <div key={index} className={styles.problemCard}>
               <div className={styles.iconWrapper}>{problem.icon}</div>
+              <h3>{problem.title}</h3>
               <p>{problem.text}</p>
             </div>
           ))}

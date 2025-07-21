@@ -1,61 +1,87 @@
-/* src/components/ServicesSection.module.css */
+/* src/components/ServicesSection.module.css (New Tabbed Layout) */
 .servicesSection {
   background-color: var(--dark-bg);
 }
-.servicesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
-  margin-top: 4rem;
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
 }
-.serviceCard {
+
+.tab {
   background-color: var(--light-grey-bg);
+  color: var(--text-secondary);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   transition: all 0.3s ease;
-  transform-style: preserve-3d;
 }
-.serviceCard:hover {
-  transform: perspective(1000px) rotateY(5deg) scale(1.03);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+
+.tab:hover {
+  background-color: var(--slova-blue);
+  color: white;
   border-color: var(--slova-blue);
 }
-.iconWrapper {
-  font-size: 2.5rem;
+
+.tab.active {
+  background-color: var(--slova-blue);
+  color: white;
+  border-color: var(--slova-blue);
+  box-shadow: 0 4px 20px rgba(0, 124, 240, 0.4);
+}
+
+.tabContent {
+  background-color: var(--light-grey-bg);
+  border-radius: 12px;
+  padding: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.serviceList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.serviceItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.checkmark {
   color: var(--slova-blue);
-  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
-.serviceCard h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
+
+.serviceItem h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 0.25rem;
 }
-.serviceCard p {
+
+.serviceItem p {
   color: var(--text-secondary);
   line-height: 1.6;
-  margin-bottom: 1.5rem;
 }
-.subserviceList {
-  list-style-type: none;
-  text-align: left;
-  padding-left: 10px;
-}
-.subserviceList li {
-  padding: 0.5rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-.subserviceList li::before {
-  content: '✓';
-  color: var(--slova-blue);
-  margin-right: 10px;
-}
+
 @media (max-width: 768px) {
-  .servicesGrid {
-    grid-template-columns: 1fr;
+  .serviceList {
+    grid-template-columns: 1fr; /* Stack services on mobile */
   }
-  .serviceCard:hover {
-    /* Disable hover effect on mobile for better usability */
-    transform: none;
-    box-shadow: none;
+  .tabContent {
+    padding: 2rem;
   }
 }

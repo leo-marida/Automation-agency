@@ -17,7 +17,7 @@ const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.logoContainer}>
-          <a href="#">
+          <a href="/">
             <Image src="/slova-logo2.png" alt="Slova Automations Logo" width={200} /* Increased base width */
               height={200} className={styles.logoImage} />
           </a>
@@ -25,11 +25,12 @@ const Header = () => {
         
         {/* Desktop Navigation */}
         <nav className={styles.navDesktop}>
-          <a href="#services">Services</a>
-          <a href="#case-studies">Case Studies</a> 
-          <a href="#how-it-works">How It Works</a>
-          <a href="#about">About</a>
-          <a href="#contact" className={styles.contactButton}>Contact</a>
+          <a href="/#services">Services</a>
+          <a href="/#why-us">Why Us?</a>
+          <a href="/#case-studies">Case Studies</a> 
+          <a href="/#how-it-works">How It Works</a>
+          <a href="/#about">About</a>
+          <a href="/#contact" className={styles.contactButton}>Contact</a>
         </nav>
 
         {/* Hamburger Icon for Mobile */}
@@ -44,11 +45,12 @@ const Header = () => {
           <button className={styles.closeButton} onClick={toggleMenu} aria-label="Close menu">
             <FaTimes />
           </button>
-          <a href="#services" onClick={toggleMenu}>Services</a>
-          <a href="#showcase" onClick={toggleMenu}>Case Studies</a>
-          <a href="#how-it-works" onClick={toggleMenu}>How It Works</a>
-          <a href="#about" onClick={toggleMenu}>About</a>
-          <a href="#contact" onClick={toggleMenu}>Contact</a>
+          <a href="/#services" onClick={toggleMenu}>Services</a>
+          <a href="/#why-us" onClick={toggleMenu}>Why Us?</a>
+          <a href="/#case-studies" onClick={toggleMenu}>Case Studies</a>
+          <a href="/#how-it-works" onClick={toggleMenu}>How It Works</a>
+          <a href="/#about" onClick={toggleMenu}>About</a>
+          <a href="/#contact" onClick={toggleMenu}>Contact</a>
         </div>
       )}
     </>

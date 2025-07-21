@@ -1,0 +1,30 @@
+/* src/components/ScrollToTopButton.module.css */
+.button {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: var(--slova-blue);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 124, 240, 0.4);
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.button:hover {
+  background-color: var(--slova-blue-dark);
+}
