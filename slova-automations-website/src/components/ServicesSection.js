@@ -7,22 +7,38 @@ const services = [
       icon: <FaShoppingCart />,
       title: "E-commerce Stores",
       description: "From Shopify to custom-built stores, we specialize in driving sales and efficiency for online merchants.",
-      subservices: ["AI Sales Recovery", "24/7 Support Agent", "AI Product Recommendations"]
+      subservices: [
+          "AI-Powered Abandoned Cart Recovery", 
+          "24/7 Intelligent Customer Support Agent", 
+          "Personalized Product Recommendations",
+          "Automated Inventory Forecasting"
+      ]
     },
     {
       icon: <FaHome />,
       title: "Real Estate Professionals",
       description: "Automate lead qualification, appointment scheduling, and client follow-up to give you more time to close deals.",
-      subservices: []
+      subservices: [
+          "Automated Lead Qualification & Nurturing",
+          "Intelligent Appointment Scheduling",
+          "Automated Market Report Generation",
+          "Client Follow-up Sequences"
+      ]
     },
     {
       icon: <FaCogs />,
       title: "SaaS Companies",
       description: "Enhance user onboarding, automate support tickets, and analyze user feedback with custom AI assistants.",
-      subservices: []
+      subservices: [
+          "Automated User Onboarding Flows",
+          "AI-Powered Support Ticket Triage",
+          "User Feedback Sentiment Analysis",
+          "Proactive Churn Risk Alerts"
+      ]
     }
-]
+];
 
+// The rest of the component remains the same
 const ServicesSection = () => {
   return (
     <section id="services" className={styles.servicesSection}>

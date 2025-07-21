@@ -1,43 +1,129 @@
-/* src/components/AboutSection.module.css */
+/* src/components/AboutSection.module.css (Final Polished Version) */
+
 .aboutSection {
   background-color: var(--light-bg);
   color: var(--text-dark);
 }
-.container {
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.carouselContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.teamCard {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  gap: 4rem;
+  gap: 2.5rem;
+  padding: 3rem;
+  border: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
 }
+
+/* --- NEW: Hover effect is now conditional --- */
+.teamCard.interactive:hover {
+  transform: scale(1.02);
+  border-color: var(--slova-blue);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
 .imageContainer {
   flex-shrink: 0;
 }
 .headshot {
   border-radius: 50%;
-  border: 5px solid var(--slova-blue);
-  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+  object-fit: cover;
 }
 .textContainer {
   text-align: left;
 }
-.title {
-  text-align: left;
-  margin-bottom: 1rem;
+.textContainer h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.textContainer h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--slova-blue);
+  margin: 0.25rem 0 1.5rem 0;
 }
 .textContainer p {
-  font-size: 1.2rem;
-  line-height: 1.8;
+  font-size: 1.1rem;
+  line-height: 1.7;
   color: #4a4a4a;
 }
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+  color: var(--text-dark);
+  border: 1px solid #e0e0e0;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.arrow:hover {
+  background-color: var(--slova-blue);
+  color: white;
+  border-color: var(--slova-blue);
+  transform: translateY(-50%) scale(1.1);
+}
+.leftArrow {
+  left: -35px;
+}
+.rightArrow {
+  right: -35px;
+}
+
+/* --- RESPONSIVE FIXES --- */
+@media (max-width: 1024px) {
+  .leftArrow {
+    left: 10px;
+  }
+  .rightArrow {
+    right: 10px;
+  }
+}
+
 @media (max-width: 768px) {
-  .container {
+  .teamCard {
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
   }
-  .title {
-    text-align: center;
+  .textContainer h4 {
+    margin: 0.5rem 0 1rem 0;
   }
-  .headshot {
-    width: 200px;
-    height: 200px;
+  .teamCard.interactive:hover {
+    transform: none;
+    border-color: #e5e5e5;
+  }
+
+  /* --- KEY FIX for Mobile Arrows --- */
+  .arrow {
+    width: 45px;
+    height: 45px;
+  }
+  .leftArrow {
+    left: -25px; /* Position cleanly on the side */
+  }
+  .rightArrow {
+    right: -25px; /* Position cleanly on the side */
   }
 }

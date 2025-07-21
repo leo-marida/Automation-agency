@@ -99,21 +99,35 @@
 }
 
 
-/* --- Responsive Styles --- */
-@media (max-width: 1100px) {
-  .leftArrow { left: 10px; }
-  .rightArrow { right: 10px; }
+@media (max-width: 1024px) {
+  .arrow {
+    /* --- KEY CHANGE: Move arrows slightly more inwards but still outside the card --- */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker for better contrast */
+    width: 45px;
+    height: 45px;
+    font-size: 1rem;
+  }
+  
+  .leftArrow {
+    left: -20px; /* Position just outside the main container's padding */
+  }
+  
+  .rightArrow {
+    right: -20px; /* Position just outside the main container's padding */
+  }
 }
 
 @media (max-width: 768px) {
+  /* On smaller mobile, move them even further in to be tappable */
+  .leftArrow {
+    left: -30px;
+  }
+  
+  .rightArrow {
+    right: -30px;
+  }
+
   .videoContent h3 {
     font-size: 1.2rem;
   }
-  .arrow {
-    width: 40px;
-    height: 40px;
-    font-size: 1rem;
-  }
-  .leftArrow { left: 5px; }
-  .rightArrow { right: 5px; }
 }

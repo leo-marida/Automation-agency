@@ -16,10 +16,10 @@ const Footer = () => {
             </a>
           </p>
         </div>
-        <div className={styles.socialLinks}>
+        {/* <div className={styles.socialLinks}>
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
           <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><FaTwitter /></a>
-        </div>
+        </div> */}
       </div>
     </footer>
   );

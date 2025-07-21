@@ -1,31 +1,60 @@
-/* src/components/FinalCTASection.module.css */
+/* src/components/FinalCTASection.module.css (Completely Revamped) */
+
 .ctaSection {
   background-image: linear-gradient(45deg, var(--slova-blue), var(--slova-blue-dark));
   color: white;
 }
+
 .title {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
+
 .text {
   font-size: 1.2rem;
   max-width: 600px;
-  margin: 0 auto 2.5rem auto;
+  margin: 0 auto 3rem auto; /* Increased bottom margin for more space */
   opacity: 0.9;
 }
+
+/* --- THE NEW AND IMPROVED CTA BUTTON --- */
 .ctaButton {
+  /* Structure & Appearance */
+  display: inline-block; /* Allows padding and margins to work correctly */
   background: white;
   color: var(--slova-blue-dark);
+  border: none; /* Remove default border */
+  border-radius: 50px; /* Creates the perfect rounded "pill" shape */
+  
+  /* Size & Spacing */
+  padding: 1.2rem 3rem; /* Generous padding for a substantial feel */
+  font-size: 1.2rem;
   font-weight: 700;
+  
+  /* Effects & Polish */
+  text-decoration: none; /* Removes the default link underline */
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2); /* A subtle shadow to lift it off the background */
+  transition: all 0.3s ease-out; /* Smooth transition for all properties */
 }
+
+/* --- THE NEW HOVER EFFECT --- */
 .ctaButton:hover {
-  background: var(--light-bg);
-  color: var(--slova-blue-dark);
-  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3) !important;
+  background: var(--light-bg); /* A slightly off-white for a subtle change */
+  color: var(--slova-blue-dark); /* Text color remains the same */
+  
+  /* The "lift and grow" animation */
+  transform: translateY(-3px) scale(1.02); 
+  
+  /* A more pronounced shadow to enhance the "lift" effect */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); 
 }
+
+
+/* --- RESPONSIVE STYLES (Unchanged) --- */
 @media (max-width: 768px) {
   .title {
-    font-size: 2.2rem; /* Reduce headline size */
+    font-size: 2.2rem;
   }
 }
