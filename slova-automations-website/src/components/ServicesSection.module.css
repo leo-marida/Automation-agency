@@ -1,8 +1,7 @@
-/* src/components/ServicesSection.module.css (Final "Floating Card" Design) */
+/* src/components/ServicesSection.module.css (Final Version) */
 .servicesSection {
   background-color: var(--dark-bg);
 }
-
 .tabs {
   display: flex;
   justify-content: center;
@@ -10,7 +9,6 @@
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
-
 .tab {
   background-color: var(--light-grey-bg);
   color: var(--text-secondary);
@@ -25,81 +23,97 @@
   gap: 0.75rem;
   transition: all 0.3s ease;
 }
-
 .tab:hover {
   background-color: var(--slova-blue);
   color: white;
   border-color: var(--slova-blue);
 }
-
 .tab.active {
   background-color: var(--slova-blue);
   color: white;
   border-color: var(--slova-blue);
   box-shadow: 0 4px 20px rgba(0, 124, 240, 0.4);
 }
-
-/* --- KEY CHANGE: Remove the background and border from the container --- */
 .tabContent {
-  /* This container is now just for layout, not for styling */
-  padding-top: 1rem; /* Add a bit of space above the cards */
+  padding-top: 1rem;
 }
-
 .serviceList {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: stretch; /* Replaces align-items: start for better height matching */
-  gap: 2rem; /* Reduced gap slightly for a tighter look */
+  align-items: stretch;
+  gap: 2rem;
 }
-
-/* --- KEY CHANGE: Enhanced Card Styling --- */
 .serviceItem {
   display: flex;
-  flex-direction: column; /* Allows content to space out vertically */
+  flex-direction: column;
   gap: 1rem;
   text-align: left;
-  background-color: var(--light-grey-bg); /* Use the light grey for contrast */
+  background-color: var(--light-grey-bg);
   padding: 2rem;
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   height: 100%;
-  
-  /* --- Add the transition for the hover effect --- */
   transition: all 0.3s ease;
 }
-
-/* --- NEW: The Signature Hover Effect --- */
 .serviceItem:hover {
   transform: translateY(-5px);
   border-color: var(--slova-blue);
 }
-
-.checkmark {
-  color: var(--slova-blue);
-  font-size: 1.5rem;
-  font-weight: 700;
-  /* Removed margin-top, flexbox gap will handle spacing */
-}
-
-/* --- A new container for the checkmark and title --- */
 .serviceItemHeader {
     display: flex;
     align-items: flex-start;
     gap: 1rem;
 }
-
+.checkmark {
+  color: var(--slova-blue);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 .serviceItem h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-light);
-  margin-bottom: 0; /* Let the parent container handle spacing */
+  margin-bottom: 0;
 }
-
 .serviceItem p {
   color: var(--text-secondary);
   line-height: 1.6;
-  padding-left: 2.5rem; /* Indent description to align with title */
-  flex-grow: 1; /* Pushes content down to align descriptions */
+  padding-left: 2.5rem;
+  flex-grow: 1;
+}
+.toggleContainer {
+  text-align: center;
+  margin-top: 3rem;
+}
+.toggleButton {
+  background-color: transparent;
+  color: var(--slova-blue);
+  border: 2px solid var(--slova-blue);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.toggleButton:hover {
+  background-color: var(--slova-blue);
+  color: white;
+}
+.nicheToggleButton {
+  background-color: transparent;
+  color: var(--text-secondary);
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.nicheToggleButton:hover {
+  color: var(--text-light);
+  border-color: var(--slova-blue);
 }
 
 @media (max-width: 768px) {
