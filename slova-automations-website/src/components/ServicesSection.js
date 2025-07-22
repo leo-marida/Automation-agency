@@ -110,7 +110,7 @@ const ServicesSection = () => {
           })}
           
           {secondaryNiches.length > 0 && (
-            <button onClick={() => setShowAllNiches(!showAllNiches)} className={styles.nicheToggleButton}>
+            <button onClick={() => setShowAllNiches(!showAllNiches)} className={styles.toggleButton} >
               {showAllNiches ? 'Show Less' : `+ ${secondaryNiches.length} More Niches`}
             </button>
           )}
