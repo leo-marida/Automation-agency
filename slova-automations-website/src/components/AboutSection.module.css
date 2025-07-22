@@ -25,13 +25,12 @@
   border: 1px solid #e5e5e5;
   transition: all 0.3s ease;
 }
-
-/* --- NEW: Hover effect is now conditional --- */
-.teamCard.interactive:hover {
-  transform: scale(1.02);
+.teamCard:hover {
+  transform: translateY(-5px) scale(1.02); /* Use the "lift" effect */
   border-color: var(--slova-blue);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
+
 
 .imageContainer {
   flex-shrink: 0;
@@ -110,10 +109,7 @@
   .textContainer h4 {
     margin: 0.5rem 0 1rem 0;
   }
-  .teamCard.interactive:hover {
-    transform: none;
-    border-color: #e5e5e5;
-  }
+  
 
   /* --- KEY FIX for Mobile Arrows --- */
   .arrow {
