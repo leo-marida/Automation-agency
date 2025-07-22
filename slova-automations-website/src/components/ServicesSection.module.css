@@ -1,8 +1,8 @@
-/* src/components/ServicesSection.module.css (Final Professional Version) */
-
+/* src/components/ServicesSection.module.css (Final "Floating Card" Design) */
 .servicesSection {
   background-color: var(--dark-bg);
 }
+
 .tabs {
   display: flex;
   justify-content: center;
@@ -10,6 +10,7 @@
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
+
 .tab {
   background-color: var(--light-grey-bg);
   color: var(--text-secondary);
@@ -24,100 +25,85 @@
   gap: 0.75rem;
   transition: all 0.3s ease;
 }
+
 .tab:hover {
   background-color: var(--slova-blue);
   color: white;
   border-color: var(--slova-blue);
 }
+
 .tab.active {
   background-color: var(--slova-blue);
   color: white;
   border-color: var(--slova-blue);
   box-shadow: 0 4px 20px rgba(0, 124, 240, 0.4);
 }
+
+/* --- KEY CHANGE: Remove the background and border from the container --- */
 .tabContent {
-  background-color: var(--light-grey-bg);
-  border-radius: 12px;
-  padding: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* This container is now just for layout, not for styling */
+  padding-top: 1rem; /* Add a bit of space above the cards */
 }
 
-/* --- NEW PILLAR LAYOUT FOR E-COMMERCE --- */
-.pillarLayout {
+.serviceList {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: stretch; 
-}
-.pillarCard {
-  background-color: var(--dark-bg);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s ease;
-}
-.pillarCard:hover {
-  border-color: var(--slova-blue);
-  transform: translateY(-5px);
-}
-.pillarCard h3 {
-  font-size: 1.5rem;
-  color: var(--slova-blue);
-  margin-bottom: 0.75rem;
-}
-.pillarDescription {
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-}
-.pillarCard .serviceList {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  align-items: stretch; /* Replaces align-items: start for better height matching */
+  gap: 2rem; /* Reduced gap slightly for a tighter look */
 }
 
-/* --- ORIGINAL LIST LAYOUT FOR OTHER NICHES --- */
-.serviceListOriginal {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
-}
-
-/* --- SHARED STYLES FOR SERVICE ITEMS --- */
+/* --- KEY CHANGE: Enhanced Card Styling --- */
 .serviceItem {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column; /* Allows content to space out vertically */
   gap: 1rem;
   text-align: left;
+  background-color: var(--light-grey-bg); /* Use the light grey for contrast */
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  height: 100%;
+  
+  /* --- Add the transition for the hover effect --- */
+  transition: all 0.3s ease;
 }
+
+/* --- NEW: The Signature Hover Effect --- */
+.serviceItem:hover {
+  transform: translateY(-5px);
+  border-color: var(--slova-blue);
+}
+
 .checkmark {
   color: var(--slova-blue);
   font-size: 1.5rem;
   font-weight: 700;
+  /* Removed margin-top, flexbox gap will handle spacing */
 }
+
+/* --- A new container for the checkmark and title --- */
+.serviceItemHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
 .serviceItem h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-light);
-  margin-bottom: 0.25rem;
+  margin-bottom: 0; /* Let the parent container handle spacing */
 }
+
 .serviceItem p {
   color: var(--text-secondary);
   line-height: 1.6;
-}
-
-@media (max-width: 900px) {
-  .pillarLayout {
-    grid-template-columns: 1fr;
-  }
+  padding-left: 2.5rem; /* Indent description to align with title */
+  flex-grow: 1; /* Pushes content down to align descriptions */
 }
 
 @media (max-width: 768px) {
-  .serviceListOriginal {
+  .serviceList {
     grid-template-columns: 1fr;
-  }
-  .tabContent {
-    padding: 2rem;
   }
 }
