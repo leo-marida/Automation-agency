@@ -7,9 +7,12 @@ const SolutionSection = () => {
     <section id="solution" className={styles.solutionSection}>
       <div className={`container ${styles.container}`}>
         <div className={styles.textContainer}>
-          <h2 className={`section-title ${styles.title}`}>This is Where We Come In.</h2>
+          {/* --- UPGRADED HEADLINE --- */}
+          <h2 className={`section-title ${styles.title}`}>We Turn Your Biggest Headaches into Your Greatest Strengths.</h2>
+          
+          {/* --- UPGRADED TEXT --- */}
           <p className={styles.paragraph}>
-            Slova Automations doesn't just build bots; we build intelligent, reliable systems that become your most valuable employees. By integrating powerful AI directly into your E-commerce workflow, we free you up to focus on what you do best: building your brand.
+            Slova Automations builds more than just bots—we build your new, 24/7 digital workforce. We take the repetitive, time-consuming tasks that are slowing you down and transform them into intelligent, automated systems that drive revenue, delight customers, and free you up to focus on growth.
           </p>
         </div>
         <div className={styles.visualContainer}>

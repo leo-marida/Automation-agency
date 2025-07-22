@@ -3,21 +3,20 @@ import styles from './HowItWorksSection.module.css';
 const steps = [
   {
     number: "01",
-    title: "Discover",
-    description: "We start with a free, no-pressure call to understand your biggest challenges and identify the highest-impact automation opportunities."
+    title: "Discovery & Strategy",
+    description: "We start with a free call to deeply understand your business. Together, we'll pinpoint the exact automation opportunities that will deliver the highest return on investment."
   },
   {
     number: "02",
-    title: "Build & Deploy",
-    description: "Our team designs and builds your custom AI agent. We handle all the technical work and integrate it seamlessly into your store."
+    title: "Custom Build & Integration",
+    description: "This is where we do the heavy lifting. Our team designs, builds, and rigorously tests your custom AI solution, ensuring it integrates seamlessly with your existing workflow."
   },
   {
     number: "03",
-    title: "Support & Optimize",
-    description: "We don't just launch and leave. We provide ongoing support and monitor performance to ensure your automation is delivering maximum ROI."
+    title: "Launch & Partnership",
+    description: "Our job isn't done at launch. We provide ongoing support and performance monitoring to ensure your new systems are delivering measurable results, month after month."
   }
-]
-
+];
 const HowItWorksSection = () => {
   return (
     <section id="how-it-works" className={styles.howItWorksSection}>

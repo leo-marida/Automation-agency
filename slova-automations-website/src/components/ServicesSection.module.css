@@ -1,8 +1,8 @@
-/* src/components/ServicesSection.module.css (New Tabbed Layout) */
+/* src/components/ServicesSection.module.css (Final Professional Version) */
+
 .servicesSection {
   background-color: var(--dark-bg);
 }
-
 .tabs {
   display: flex;
   justify-content: center;
@@ -10,7 +10,6 @@
   margin-bottom: 3rem;
   flex-wrap: wrap;
 }
-
 .tab {
   background-color: var(--light-grey-bg);
   color: var(--text-secondary);
@@ -25,20 +24,17 @@
   gap: 0.75rem;
   transition: all 0.3s ease;
 }
-
 .tab:hover {
   background-color: var(--slova-blue);
   color: white;
   border-color: var(--slova-blue);
 }
-
 .tab.active {
   background-color: var(--slova-blue);
   color: white;
   border-color: var(--slova-blue);
   box-shadow: 0 4px 20px rgba(0, 124, 240, 0.4);
 }
-
 .tabContent {
   background-color: var(--light-grey-bg);
   border-radius: 12px;
@@ -46,40 +42,80 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.serviceList {
+/* --- NEW PILLAR LAYOUT FOR E-COMMERCE --- */
+.pillarLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch; 
+}
+.pillarCard {
+  background-color: var(--dark-bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.pillarCard:hover {
+  border-color: var(--slova-blue);
+  transform: translateY(-5px);
+}
+.pillarCard h3 {
+  font-size: 1.5rem;
+  color: var(--slova-blue);
+  margin-bottom: 0.75rem;
+}
+.pillarDescription {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+.pillarCard .serviceList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- ORIGINAL LIST LAYOUT FOR OTHER NICHES --- */
+.serviceListOriginal {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
 }
 
+/* --- SHARED STYLES FOR SERVICE ITEMS --- */
 .serviceItem {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
   text-align: left;
 }
-
 .checkmark {
   color: var(--slova-blue);
   font-size: 1.5rem;
   font-weight: 700;
 }
-
 .serviceItem h4 {
   font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-light);
   margin-bottom: 0.25rem;
 }
-
 .serviceItem p {
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
+@media (max-width: 900px) {
+  .pillarLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
-  .serviceList {
-    grid-template-columns: 1fr; /* Stack services on mobile */
+  .serviceListOriginal {
+    grid-template-columns: 1fr;
   }
   .tabContent {
     padding: 2rem;

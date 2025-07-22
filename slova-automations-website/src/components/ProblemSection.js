@@ -1,23 +1,23 @@
 // src/components/ProblemSection.js
-import { FaShoppingCart, FaHeadset, FaChartLine } from 'react-icons/fa'; // New, more specific icons
+import { FaShoppingCart, FaHeadset, FaChartLine } from 'react-icons/fa';
 import styles from './ProblemSection.module.css';
 
-// --- NEW, E-COMMERCE FOCUSED PROBLEMS ---
+// --- UPGRADED, MORE PERSUASIVE CONTENT ---
 const problems = [
   {
     icon: <FaShoppingCart />,
-    title: "High Cart Abandonment",
-    text: "Watching potential sales vanish every day because generic follow-up emails aren't compelling enough to bring customers back."
+    title: "You're Losing Sales in Plain Sight",
+    text: "Every abandoned cart is a customer who wanted to buy. Without an intelligent recovery system, you're letting guaranteed revenue slip through your fingers every single day."
   },
   {
     icon: <FaHeadset />,
-    title: "Overwhelming Support Tickets",
-    text: "Your team is swamped answering the same 'Where is my order?' and 'What's your return policy?' questions over and over again."
+    title: "Your Team is Drowning in Repetitive Work",
+    text: "Your best people are wasting valuable time answering the same basic questions. This drains resources and prevents them from focusing on high-value customer interactions."
   },
   {
     icon: <FaChartLine />,
-    title: "Missed Growth Opportunities",
-    text: "Lacking the time and tools to offer personalized product recommendations or proactively manage inventory levels."
+    title: "Your Growth Has Hit a Wall",
+    text: "You're leaving money on the table by not offering the personalized, Amazon-level experience that turns one-time buyers into loyal, repeat customers."
   }
 ];
 
@@ -25,7 +25,8 @@ const ProblemSection = () => {
   return (
     <section id="problem" className={styles.problemSection}>
       <div className="container">
-        <h2 className={`section-title ${styles.title}`}>The Silent Growth Killers of E-commerce</h2>
+        {/* A slightly refined headline */}
+        <h2 className={`section-title ${styles.title}`}>Are These Silent Killers Stalling Your Growth?</h2>
         <div className={styles.problemsGrid}>
           {problems.map((problem, index) => (
             <div key={index} className={styles.problemCard}>
