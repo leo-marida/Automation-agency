@@ -29,7 +29,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <body>{children}
+        <script src="//code.tidio.co/pimcdxtel2ywonvsq16phqrfgounovbr.js" async></script>
+      </body>
     </html>
   );
 }

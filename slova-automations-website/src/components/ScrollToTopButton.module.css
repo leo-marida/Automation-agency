@@ -1,7 +1,7 @@
-/* src/components/ScrollToTopButton.module.css */
 .button {
   position: fixed;
-  bottom: 2rem;
+  /* --- KEY CHANGE: Increase the bottom value --- */
+  bottom: 50%; /* Was 2rem, this moves it up */
   right: 2rem;
   background-color: var(--slova-blue);
   color: white;
@@ -15,7 +15,7 @@
   align-items: center;
   cursor: pointer;
   z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 124, 240, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 124, 200, 0.4);
   opacity: 0;
   animation: fadeIn 0.3s forwards;
 }
@@ -27,4 +27,11 @@
 
 .button:hover {
   background-color: var(--slova-blue-dark);
+}
+@media (max-width: 768px) {
+  .button{
+    font-size: 1rem;
+    width: 35px;
+    height: 35px;
+  }
 }
