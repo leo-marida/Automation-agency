@@ -1,5 +1,6 @@
 // src/app/layout.js
 import "./globals.css";
+import Script from 'next/script';
 
 // --- UPGRADED METADATA ---
 export const metadata = {
@@ -15,7 +16,7 @@ export const metadata = {
     // Create a 1200x630px image and place it in the /public folder
     images: [
       {
-        url: '/1200x630.png', 
+        url: '/1200x630.png',
         width: 1200,
         height: 630,
       },
@@ -30,7 +31,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>{children}
-        <script src="//code.tidio.co/pimcdxtel2ywonvsq16phqrfgounovbr.js" async></script>
+        <Script id="tawk-to-script" strategy="afterInteractive">
+          {`
+            var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+            (function(){
+              var s1 = document.createElement("script"),s0 = document.getElementsByTagName("script")[0];
+              s1.async = true;
+              s1.src = 'https://embed.tawk.to/6881e4e52430a3192bf90426/1j0tmc87s';
+              s1.charset = 'UTF-8';
+              s1.setAttribute('crossorigin','*');
+              s0.parentNode.insertBefore(s1,s0);
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );
